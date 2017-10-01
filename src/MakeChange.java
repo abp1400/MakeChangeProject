@@ -3,8 +3,9 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class MakeChange {
-		public static void main (String [] args){
-				Scanner kb = new Scanner(System.in); 
+	public static char playAgain;
+	public static void main (String [] args){
+	do {			Scanner kb = new Scanner(System.in); 
 				NumberFormat usd = NumberFormat.getCurrencyInstance();
 			
 				double price;
@@ -12,8 +13,7 @@ public class MakeChange {
 				double changeincents;
 				double change;
 				
-				
-				
+			
 				System.out.println("Please enter the price of your item: ");
 				price = kb.nextDouble();
 				System.out.println("Please enter the amount of cash you are paying with: ");
@@ -22,12 +22,12 @@ public class MakeChange {
 				 
 					while(mymoney < price){
 						System.out.println("You don't have enough money! You trying to pull a fast one?! Try again pal!");
-						System.out.println("How much money do you have now? Please enter new amount: ");
+						System.out.println("How much money do you have now? Please enter new amount of money you are paying with: ");
 						mymoney = kb.nextDouble();	
 						
 				} 
 					
-					kb.close();
+					
 					change = (mymoney - price);					
 					changeincents = Math.round(100*change);
 					
@@ -55,5 +55,10 @@ public class MakeChange {
 					System.out.println(changedime + " dimes");
 					System.out.println(changenick + " nickels");
 					System.out.println(changepennies + " pennies");
+					System.out.print("Would you like to run the register again? (y/n): ");
+					playAgain = kb.next().charAt(0);
+					
+			} while (playAgain == 'Y' || playAgain == 'y');
 		}
+	
 	}
