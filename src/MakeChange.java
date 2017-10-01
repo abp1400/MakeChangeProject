@@ -55,49 +55,49 @@ public class MakeChange {
 			if (changetwentybucks == 1) {
 				System.out.println(changetwentybucks + " twenty dollar bill");
 			}
-			if (changetwentybucks > 1) {
+			else if (changetwentybucks > 1) {
 				System.out.println(changetwentybucks + " twenty dollar bills");
 			}
 			if (changetenbucks == 1) {
 				System.out.println(changetenbucks + " ten dollar bill");
 			}	
-			if (changetenbucks > 1) {
+			else if (changetenbucks > 1) {
 				System.out.println(changetenbucks + " ten dollar bills");
 			}
 			if (changefivebucks == 1) {
 				System.out.println(changefivebucks + " five dollar bill");
 			}
-			if (changefivebucks > 1) {
+			else if (changefivebucks > 1) {
 				System.out.println(changefivebucks + " five dollar bills");
 			}
 			if (changeonebucks == 1) {
 				System.out.println(changeonebucks + " one dollar bill");
 			}
-			if (changeonebucks > 1) {
+			else if (changeonebucks > 1) {
 				System.out.println(changeonebucks + " one dollar bills");
 			}
 			if (changequarter == 1) {
 				System.out.println(changequarter + " quarter");
 			}
-			if (changequarter > 1) {
+			else if (changequarter > 1) {
 				System.out.println(changequarter + " quarters");
 			}
 			if (changedime == 1) {
 				System.out.println(changedime + " dime");
 			}
-			if (changedime > 1) {
+			else if (changedime > 1) {
 				System.out.println(changedime + " dimes");
 			}
 			if (changenick == 1) {
 				System.out.println(changenick + " nickel");
 			}
-			if (changenick > 1) {
+			else if (changenick > 1) {
 					System.out.println(changenick + " nickels");
 			}
 			if (changepennies == 1) {
 				System.out.println(changepennies + " penny");
 			}
-			if (changepennies > 1) {
+			else if (changepennies > 1) {
 				System.out.println(changepennies + " pennies");
 			}
 			System.out.print("Would you like to run the register again? (y/n): ");
