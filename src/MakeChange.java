@@ -1,6 +1,8 @@
 import java.text.NumberFormat;
 import java.util.Scanner;
-	public class MakeChange {
+import java.lang.Math;
+
+public class MakeChange {
 		public static void main (String [] args){
 				Scanner kb = new Scanner(System.in); 
 				NumberFormat usd = NumberFormat.getCurrencyInstance();
@@ -25,8 +27,9 @@ import java.util.Scanner;
 						
 				} 
 					
-					change = (mymoney - price);
-					changeincents =(change*100);
+					kb.close();
+					change = (mymoney - price);					
+					changeincents = Math.round(100*change);
 					
 					int changetenbucks = (int)changeincents/1000;
 					changeincents = changeincents % 1000;
@@ -41,5 +44,16 @@ import java.util.Scanner;
 					int changenick = (int)changeincents/5;
 					changeincents = changeincents % 5;
 					int changepennies = (int)changeincents;
+					
+					System.out.println("You gave me " + usd.format(mymoney));
+					System.out.println("for an item that cost " + usd.format(price));
+					System.out.println("Your change will be " + usd.format(change) + " which will consist of ");
+					System.out.println(changetenbucks + " ten dollar notes");
+					System.out.println(changefivebucks + " five dollar notes");
+					System.out.println(changeonebucks + " one dollar notes");
+					System.out.println(changequarter + " quarters");
+					System.out.println(changedime + " dimes");
+					System.out.println(changenick + " nickels");
+					System.out.println(changepennies + " pennies");
 		}
 	}
