@@ -24,5 +24,22 @@ import java.util.Scanner;
 						mymoney = kb.nextDouble();	
 						
 				} 
+					
+					change = (mymoney - price);
+					changeincents =(change*100);
+					
+					int changetenbucks = (int)changeincents/1000;
+					changeincents = changeincents % 1000;
+					int changefivebucks = (int)changeincents/500;
+					changeincents = changeincents % 500;
+					int changeonebucks = (int)changeincents/100;
+					changeincents = changeincents % 100;
+					int changequarter = (int)changeincents/25;
+					changeincents = changeincents % 25;
+					int changedime = (int)changeincents/10;
+					changeincents = changeincents % 10;
+					int changenick = (int)changeincents/5;
+					changeincents = changeincents % 5;
+					int changepennies = (int)changeincents;
 		}
 	}
