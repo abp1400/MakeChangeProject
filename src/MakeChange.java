@@ -31,6 +31,8 @@ public class MakeChange {
 					change = (mymoney - price);					
 					changeincents = Math.round(100*change);
 					
+					int changetwentybucks = (int)changeincents/2000;
+					changeincents = changeincents % 2000;
 					int changetenbucks = (int)changeincents/1000;
 					changeincents = changeincents % 1000;
 					int changefivebucks = (int)changeincents/500;
@@ -48,6 +50,7 @@ public class MakeChange {
 					System.out.println("You gave me " + usd.format(mymoney));
 					System.out.println("for an item that cost " + usd.format(price));
 					System.out.println("Your change will be " + usd.format(change) + " which will consist of ");
+					System.out.println(changetwentybucks + " twenty dollar notes");
 					System.out.println(changetenbucks + " ten dollar notes");
 					System.out.println(changefivebucks + " five dollar notes");
 					System.out.println(changeonebucks + " one dollar notes");
@@ -59,6 +62,6 @@ public class MakeChange {
 					playAgain = kb.next().charAt(0);
 					
 			} while (playAgain == 'Y' || playAgain == 'y');
-		}
-	
 	}
+	
+}
